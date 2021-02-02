@@ -29,18 +29,18 @@ AUTHOR = 'Andrew Boyer'
 
 EMAIL = 'andrewsboyer2@gmail.com'
 
-URL = 'https://github.com/asboyer2/reporty'
+URL = 'https://github.com/asboyer2/boyer'
 
-KEYWORDS = ['report', 'email', 'plot', 'graph', 'embed']
+KEYWORDS = ['boyer']
 
-REQUIREMENTS = ['pyaml']
+REQUIREMENTS = []
 
 PYTHON = ">=3.5"
 
 setup(name=DISTNAME,
-      packages=['reporty'],
-      package_dir={'reporty': 'module/reporty'},
-      package_data={'reporty': ['templates/*.yaml']},
+      packages=['boyer'],
+      package_dir={'boyer': 'module/boyer'},
+      # package_data={'reporty': ['templates/*.yaml']},
       version=VERSION,
       description=DESCRIPTION,
       long_description=LONG_DESCRIPTION,
