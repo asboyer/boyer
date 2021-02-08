@@ -1,10 +1,12 @@
 import sys as _sys
 import time as _time
 
-__all__ = ['hello', 'delay_print']
+__all__ = ['hello', 'delay_print', 'get_int']
 
 def hello(name):
-	print(f"Hello {name}, my name is Andrew Boyer")
+	string = f"Hello {name}, my name is Andrew Boyer"
+	print(string)
+	return string
 
 def delay_print(s, end=''):
 	for c in s:
@@ -14,18 +16,16 @@ def delay_print(s, end=''):
 	print(end)
 
 def get_int(prompt, start=0, finish=0):
-	# 
 	while True:
 		try:
 			x = int(input(f"{prompt}: "))
-			break
 		except ValueError:
 			print("Please enter an integer!")
 		if finish != 0: 
 			if start != 0:
 				if x < finish and x > start:
-					break
+					return x
 			elif x < finish:
-				break
+				return x
 			else:
-				print(f"Enter a value between {start} and {finsh}")
+				print(f"Enter a value between {start} and {finish}")
