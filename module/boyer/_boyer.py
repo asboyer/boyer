@@ -15,10 +15,11 @@ def delay_print(s, end=''):
 		_time.sleep(0.04)
 	print(end)
 
-def get_int(prompt, start=0, finish=0):
+def get_int(prompt="Enter a number", start=0, finish=0):
 	while True:
 		try:
 			x = int(input(f"{prompt}: "))
+			return x
 		except ValueError:
 			print("Please enter an integer!")
 		if finish != 0: 
