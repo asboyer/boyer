@@ -1,7 +1,7 @@
 import sys as _sys
 import time as _time
 
-__all__ = ['hello', 'delay_print']
+__all__ = ['hello', 'delay_print', 'get_int']
 
 def hello(name):
 	print(f"Hello {name}, my name is Andrew Boyer")
