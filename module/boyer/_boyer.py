@@ -5,7 +5,6 @@ __all__ = ['hello', 'delay_print', 'get_int']
 
 def hello(name):
 	string = f"Hello {name}, my name is Andrew Boyer"
-	print(string)
 	return string
 
 def delay_print(s, end=''):

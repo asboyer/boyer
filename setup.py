@@ -2,7 +2,7 @@ from setuptools import setup
 
 DISTNAME = 'boyer'
 
-VERSION = '0.0.7'
+VERSION = '0.0.8'
 
 DESCRIPTION = "Andrew Boyer's personal python library"
 
@@ -10,11 +10,10 @@ LONG_DESCRIPTION = """
 **boyer** is a python library that contains useful 
 functions for Andrew Boyer
 
-Functions:
+Available functions:
 * Hello
 * Delay Print
-
-Get int is **coming soon**
+* Get int
 
 Report any bugs or email us with questions: andrewsboyer2@gmail.com
 """
