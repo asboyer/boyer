@@ -1,7 +1,8 @@
 import sys as _sys
 import time as _time
+import os as _os
 
-__all__ = ['hello', 'delay_print', 'get_int']
+__all__ = ['hello', 'delay_print', 'clear', 'get_num']
 
 def hello(name):
 	string = f"Hello {name}, my name is Andrew Boyer"
@@ -14,18 +15,39 @@ def delay_print(s, end=''):
 		_time.sleep(0.04)
 	print(end)
 
-def get_int(prompt="Enter a number", start=0, finish=0):
+# TODO: add a only int option
+
+def get_num(prompt="Enter a number", start=False, finish=False):
 	while True:
 		try:
 			x = int(input(f"{prompt}: "))
-			return x
 		except ValueError:
-			print("Please enter an integer!")
-		if finish != 0: 
-			if start != 0:
+			print("Please enter a number!")
+			continue
+		if finish != False:
+			if start != False:
 				if x < finish and x > start:
 					return x
-			elif x < finish:
+				else:
+					print(f"Enter a value between {start} and {finish}")
+					continue
+			else:
+				if x < finish:
+					return x
+				else:
+					print(f"Enter a value below {finish}")
+					continue
+		elif start != False:
+			if x > start:
 				return x
 			else:
-				print(f"Enter a value between {start} and {finish}")
+				print(f"Enter a value above {start}")
+				continue
+		else:
+			return x
+
+def clear():
+	if _sys.platform.startswith('win32'):
+		_os.system('cls')
+	else:
+		_os.system('clear')
