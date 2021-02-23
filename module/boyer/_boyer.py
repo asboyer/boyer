@@ -15,12 +15,17 @@ def delay_print(s, end=''):
 		_time.sleep(0.04)
 	print(end)
 
-# TODO: add a only int option
-
-def get_num(prompt="Enter a number", start=False, finish=False):
+def get_num(prompt="Enter a number", start=False, finish=False, integer=False, round_up=False):
 	while True:
 		try:
-			x = int(input(f"{prompt}: "))
+			x = float(input(f"{prompt}: "))
+			if integer:
+				if round_up:
+					num = x - int(x)
+					if num >= 0.5:
+						x = int(x) + 1
+				else:
+					x = int(x)
 		except ValueError:
 			print("Please enter a number!")
 			continue
