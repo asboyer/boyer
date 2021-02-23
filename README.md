@@ -10,6 +10,6 @@ Functions:
 * Get num
 
 **docs coming soon...**
-### [Version 0.0.9 out now](https://pypi.org/project/boyer/)
+### [Version 0.0.9 **out now**](https://pypi.org/project/boyer/)
 
 Report any bugs or email us with questions: andrewsboyer2@gmail.com
