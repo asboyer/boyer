@@ -5,11 +5,12 @@
 functions for Andrew Boyer
 
 Functions:
-* Hello
-* Delay Print
-* Get num
+* `hello`
+* `delay_print`
+* `get_num`
+* `clear`
 
-**docs coming soon...**
-### [Version 0.0.9 **out now**](https://pypi.org/project/boyer/)
+**documentation coming soon...**
+### [Version 0.0.9 out now](https://pypi.org/project/boyer/)
 
 Report any bugs or email us with questions: andrewsboyer2@gmail.com
