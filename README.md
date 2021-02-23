@@ -1,4 +1,4 @@
-# My Personnal Python Library
+# My Personal Python Library
 ### ***pip install boyer***
 
 **boyer** is a python library that contains useful 
