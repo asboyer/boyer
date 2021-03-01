@@ -15,10 +15,16 @@ def delay_print(s, end=''):
 		_time.sleep(0.04)
 	print(end)
 
+def clear():
+	if _sys.platform.startswith('win32'):
+		_os.system('cls')
+	else:
+		_os.system('clear')
+
 def get_num(prompt="Enter a number", start=False, finish=False, integer=False, round_up=False):
 	while True:
 		try:
-			x = float(input(f"{prompt}: "))
+			x = float(input({prompt}))
 			if integer:
 				if round_up:
 					num = x - int(x)
@@ -51,8 +57,3 @@ def get_num(prompt="Enter a number", start=False, finish=False, integer=False, r
 		else:
 			return x
 
-def clear():
-	if _sys.platform.startswith('win32'):
-		_os.system('cls')
-	else:
-		_os.system('clear')
