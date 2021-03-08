@@ -2,6 +2,9 @@ import sys as _sys
 import time as _time
 import os as _os
 
+
+# TODO: write documentation for all functions
+
 __all__ = ['hello', 'delay_print', 'clear', 'get_num']
 
 def hello(name):
