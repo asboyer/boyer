@@ -89,18 +89,19 @@ def get_num(prompt="Enter a number", start="default", finish="default",
         except ValueError:
             print("Please enter a number!")
             continue
+        # if default, skip and just return num
         if finish != "default":
             if start != "default":
                 if start < number < finish:
                     return number
                 print(f"Enter a value between {start} and {finish}")
                 continue
-            if number < finish:
+            if number <= finish:
                 return number
             print(f"Enter a value below {finish}")
             continue
         if start != "default":
-            if number > start:
+            if number >= start:
                 return number
             print(f"Enter a value above {start}")
             continue
