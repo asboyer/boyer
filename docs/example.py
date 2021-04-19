@@ -63,7 +63,7 @@ print(f"Output: {boyer.get_num()}")
 # specifications: if a number is not entered, "Please enter a number!" will be printed
 #                 prompt is "Enter a number: "
 
-print(f"Output: {boyer.get_num(prompt="Please enter a number")}")
+print(f"Output: {boyer.get_num(prompt='Please enter a number')}")
 # specification: prompt is "Please enter a number: " (NOTE: the ": " are automatically added)
 
 print(f"Output: {boyer.get_num(start=0)}")
@@ -81,7 +81,7 @@ print(f"Output: {boyer.get_num(round_up=True)}")
 print(f"Output: {boyer.get_num(round_up=True, round_num=0.7)}")
 # specification: the final value will be "rounded up" if the value is greater than or equal to 0.7
 
-print(f"Output: {boyer.get_num("Number", 5, 10, False, True, 0.9)}")
+print(f"Output: {boyer.get_num('Number', 5, 10, False, True, 0.9)}")
 # NOTE: these are all positional arguments
 # specifications: prompt is "Number:"
 #                 minimum accepted value is 5
