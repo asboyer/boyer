@@ -92,7 +92,7 @@ def get_num(prompt="Enter a number", start="default", finish="default",
         # if default, skip and just return num
         if finish != "default":
             if start != "default":
-                if start < number < finish:
+                if start <= number <= finish:
                     return number
                 print(f"Enter a value between {start} and {finish}")
                 continue
