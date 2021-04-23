@@ -57,6 +57,9 @@ print('\n_____get_num()_____')
 # round_up(boolean, specifies if rounding up), round_num(the minimum remainder for rounding up)
 # default: False                               default: 0.5
 
+# error_message(boolean, but can be any string)
+# default: False
+
 # for all cases below, output: "Output: (number entered)"
 
 print(f"Output: {boyer.get_num()}")
@@ -81,10 +84,14 @@ print(f"Output: {boyer.get_num(round_up=True)}")
 print(f"Output: {boyer.get_num(round_up=True, round_num=0.7)}")
 # specification: the final value will be "rounded up" if the value is greater than or equal to 0.7
 
-print(f"Output: {boyer.get_num('Number', 5, 10, False, True, 0.9)}")
+print(f"Output: {boyer.get_num(error_message="Wrong numba!")}")
+# specification: rather than the default error messages, every error message will prompt with "Wrong numba!"
+
+print(f"Output: {boyer.get_num('Number', 5, 10, False, True, 0.9, "Enter the right number!")}")
 # NOTE: these are all positional arguments
 # specifications: prompt is "Number:"
 #                 minimum accepted value is 5
 #                 maximum accepted value is 10
 #                 integer input is not required
 #                 rounding up is will happen if the tens the place is greater than or equal to 9
+#                 all error messages will be "Enter the right number!"
