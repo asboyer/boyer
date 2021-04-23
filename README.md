@@ -17,7 +17,8 @@ Functions:
 * `get_num`
 * `clear`
 
-**docstrings are fresh off the press**
-### [Version 0.1.1 out now](https://pypi.org/project/boyer/)
+**docstrings and documentation are fresh off the press**
+### [Version 0.1.4 out now](https://pypi.org/project/boyer/)
+#### [Documentation](https://github.com/asboyer2/boyer/tree/master/docs)
 
 Report any bugs or email us with questions: andrewsboyer2@gmail.com
