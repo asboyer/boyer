@@ -68,6 +68,7 @@ def get_num(prompt="Enter a number", start="default", finish="default",
         integer[boolean]: true or false statement that decides if the value must be an int
         round_up[boolean]: true or false statement that decides if it will "round up" the number
         round_num[float]: float that will determine whether or not a rounding is appropriate
+        error_message[boolean]: if not false, this custom error message will override all others
 
     Returns:
         number[double]: returns the number that meets all requirements
