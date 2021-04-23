@@ -57,7 +57,7 @@ def clear():
         _os.system('clear')
 
 def get_num(prompt="Enter a number", start="default", finish="default",
-            integer=False, round_up=False, round_num=0.5):
+            integer=False, round_up=False, round_num=0.5, error_message=False):
     """Ensures the user enters a valid number utilizing the default input() function
 
     Args:
@@ -78,7 +78,10 @@ def get_num(prompt="Enter a number", start="default", finish="default",
             number = float(input(f'{prompt}: '))
             if integer:
                 if number - int(number) != 0:
-                    print("Please enter an integer!")
+                    if not error_message:
+                        print("Please enter an integer!")
+                    else:
+                        print(error_message)
                     continue
                 if round_up:
                     num = number - int(number)
@@ -87,22 +90,34 @@ def get_num(prompt="Enter a number", start="default", finish="default",
                 else:
                     number = int(number)
         except ValueError:
-            print("Please enter a number!")
+            if not error_message:
+                print("Please enter a number!")
+            else:
+                print(error_message)
             continue
         # if default, skip and just return num
         if finish != "default":
             if start != "default":
                 if start <= number <= finish:
                     return number
-                print(f"Enter a value between {start} and {finish}")
+                if not error_message:
+                    print(f"Enter a value between {start} and {finish}")
+                else:
+                    print(error_message)
                 continue
             if number <= finish:
                 return number
-            print(f"Enter a value below {finish}")
+            if not error_message:
+                print(f"Enter a value below {finish}")
+            else:
+                print(error_message)
             continue
         if start != "default":
             if number >= start:
                 return number
-            print(f"Enter a value above {start}")
+            if not error_message:
+                print(f"Enter a value above {start}")
+            else:
+                print(error_message)
             continue
         return number
