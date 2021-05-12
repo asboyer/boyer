@@ -6,6 +6,7 @@ docs: https://github.com/asboyer2/boyer/tree/master/docs
 import sys as _sys
 import time as _time
 import os as _os
+import random as _random
 
 __all__ = ['hello', 'delay_print', 'clear', 'get_num', 'memify']
 
@@ -67,7 +68,7 @@ def memify(text):
     """
     new = []
     for i in text:
-        r = randint(0, 1)
+        r = _random.randint(0, 1)
         if r == 1:
             new.append(i.upper())
         else:
