@@ -46,6 +46,12 @@ print('\n_____clear()_____')
 boyer.clear()
 # output: none (just clears the screen)
 
+print('\n_____memify()_____')
+# input: text you wanted 'memified'
+
+print(boyer.memify('hello there'))
+# output: random, could be 'hELlO tHeRe' or 'hELLo THERE'
+
 print('\n_____get_num()_____')
 # input: all optional
 # optional input includes: prompt(str),                start(lowest possible value)
