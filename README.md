@@ -15,6 +15,7 @@ Functions:
 * `hello`
 * `delay_print`
 * `get_num`
+* `memify`
 * `clear`
 
 **docstrings and documentation are fresh off the press**
