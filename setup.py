@@ -2,7 +2,7 @@ from setuptools import setup
 
 DISTNAME = 'boyer'
 
-VERSION = '0.1.4'
+VERSION = '0.1.5'
 
 DESCRIPTION = "Andrew Boyer's personal python library"
 
@@ -14,6 +14,7 @@ Available functions:
 * Hello
 * Delay Print
 * Clear
+* Memify
 * Get Num
 
 Report any bugs or email us with questions: andrewsboyer2@gmail.com
