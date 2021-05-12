@@ -7,7 +7,7 @@ import sys as _sys
 import time as _time
 import os as _os
 
-__all__ = ['hello', 'delay_print', 'clear', 'get_num']
+__all__ = ['hello', 'delay_print', 'clear', 'get_num', 'memify']
 
 def hello(name):
     """Takes in a name, greets the person of that name with a string return
@@ -55,6 +55,25 @@ def clear():
         _os.system('cls')
     else:
         _os.system('clear')
+
+def memify(text):
+    """Returns the inputted string with random letters capitalized
+
+    Args:
+        text[str]: the text you want to modified
+
+    Returns:
+        new[str]: the modified text
+    """
+    new = []
+    for i in text:
+        r = randint(0, 1)
+        if r == 1:
+            new.append(i.upper())
+        else:
+            new.append(i.lower())
+    new = ''.join(new)
+    return new
 
 def get_num(prompt="Enter a number", start="default", finish="default",
             integer=False, round_up=False, round_num=0.5, error_message=False):
