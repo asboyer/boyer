@@ -17,16 +17,16 @@ Available functions:
 * Memify
 * Get Num
 
-Report any bugs or email us with questions: andrewsboyer2@gmail.com
+Report any bugs or email us with questions: asboyer@gmail.com
 """
 
 LICENSE = 'MIT'
 
 AUTHOR = "Andrew Boyer"
 
-EMAIL = 'andrewsboyer@gmail.com'
+EMAIL = 'asboyer@gmail.com'
 
-URL = 'https://github.com/asboyer2/boyer'
+URL = 'https://github.com/asboyer/boyer'
 
 KEYWORDS = ['boyer']
 
