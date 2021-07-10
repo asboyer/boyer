@@ -76,6 +76,9 @@ def memify(text):
     new = ''.join(new)
     return new
 
+def clean(string):
+    return string.strip().lower()
+
 def get_num(prompt="Enter a number", start="default", finish="default",
             integer=False, round_up=False, round_num=0.5, error_message=False):
     """Ensures the user enters a valid number utilizing the default input() function
