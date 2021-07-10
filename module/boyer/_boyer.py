@@ -8,7 +8,7 @@ import time as _time
 import os as _os
 import random as _random
 
-__all__ = ['hello', 'delay_print', 'clear', 'get_num', 'memify']
+__all__ = ['hello', 'delay_print', 'clear', 'get_num', 'memify', 'clean', 'encrypt', 'decrypt', 'capitalize']
 
 def hello(name):
     """Takes in a name, greets the person of that name with a string return
@@ -78,6 +78,68 @@ def memify(text):
 
 def clean(string):
     return string.strip().lower()
+
+def encrypt(string, key=3, cipher='caesar', alphabet='abcdefghijklmnopqrstuvwxyz'):
+    def find(string1, char):
+        for i in range(len(string1)):
+            if string1[i] == char:
+                return i
+        return -1
+    def caesar():
+        finalString = ''
+        for character in string.strip():
+            upper = False
+            if character == character.upper():
+                upper = True
+            position = find(alphabet, character.lower())
+            if position == -1:
+                finalString += character
+            else:
+                newPosition = (position + key) % len(alphabet)
+                if upper:
+                    finalString += alphabet[newPosition].upper()
+                else:
+                    finalString += alphabet[newPosition]
+        return finalString
+    if cipher == 'caesar':
+        return caesar()
+
+
+def decrypt(string, key=3, cipher='caesar', alphabet='abcdefghijklmnopqrstuvwxyz'):
+    def find(string1, char):
+        for i in range(len(string1)):
+            if string1[i] == char:
+                return i
+        return -1
+    def caesar():
+        finalString = ''
+        for character in string.strip():
+            upper = False
+            if character == character.upper():
+                upper = True
+            position = find(alphabet, character.lower())
+            if position == -1:
+                finalString += character
+            else:
+                newPosition = (position - key) % len(alphabet)
+                if upper:
+                    finalString += alphabet[newPosition].upper()
+                else:
+                    finalString += alphabet[newPosition]
+        return finalString
+    if cipher == 'caesar':
+        return caesar()
+
+def capitalize(string, sentance=False):
+    if len(string) < 2:
+        return string.upper()
+    if sentance:
+        return string[0].upper() + string[1:]
+    finalString = ""
+    words = string.strip().split()
+    for word in words:
+        finalString += word[0].upper() + word[1:].lower() + " "
+    return finalString.strip()
 
 def get_num(prompt="Enter a number", start="default", finish="default",
             integer=False, round_up=False, round_num=0.5, error_message=False):
