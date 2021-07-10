@@ -1,6 +1,6 @@
 <div>
 <p align="center">
-  <img src="https://github.com/asboyer2/asboyer2/blob/master/images/logo.png"/>
+  <img src="https://github.com/asboyer/asboyer/blob/master/images/logo.png"/>
 </p>
 </div>
 
@@ -17,9 +17,12 @@ Functions:
 * `get_num`
 * `memify`
 * `clear`
+* `encryption`
+* `decryption`
+* `capitalize`
 
 **docstrings and documentation are fresh off the press**
-### [Version 0.1.4 out now](https://pypi.org/project/boyer/)
-#### [Documentation](https://github.com/asboyer2/boyer/tree/master/docs)
+### [Version 0.1.6 out now](https://pypi.org/project/boyer/)
+#### [Documentation](https://github.com/asboyer/boyer/tree/master/docs)
 
 Report any bugs or email us with questions: andrewsboyer2@gmail.com
