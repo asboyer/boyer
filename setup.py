@@ -2,7 +2,7 @@ from setuptools import setup
 
 DISTNAME = 'boyer'
 
-VERSION = '0.1.6'
+VERSION = '0.1.7'
 
 DESCRIPTION = "Andrew Boyer's personal python library"
 

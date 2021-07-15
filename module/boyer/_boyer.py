@@ -130,10 +130,10 @@ def decrypt(string, key=3, cipher='caesar', alphabet='abcdefghijklmnopqrstuvwxyz
     if cipher == 'caesar':
         return caesar()
 
-def capitalize(string, sentance=False):
+def capitalize(string, sentence=False):
     if len(string) < 2:
         return string.upper()
-    if sentance:
+    if sentence:
         return string[0].upper() + string[1:]
     finalString = ""
     words = string.strip().split()
